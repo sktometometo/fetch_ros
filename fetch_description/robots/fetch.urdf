@@ -134,6 +134,39 @@
     <child link="head_pan_link" />
     <axis xyz="0 0 1" />
   <limit effort="0.32" lower="-1.57" upper="1.57" velocity="1.57" /></joint>
+  <link name="head_box_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0321 0.0161 0.0390" />
+      <mass value="2.2556" />
+      <inertia ixx="0.0129" ixy="0.0002" ixz="0.0007" iyy="0.0095" iyz="-0.0" izz="0.0184" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://fetch_description/meshes/head_box_link.dae" />
+      </geometry>
+      <material name="">
+        <color rgba="0.356 0.361 0.376 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://fetch_description/meshes/head_box_link_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="head_box_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0" />
+    <parent link="head_pan_link" />
+    <child link="head_box_link" />
+  </joint>
+  <link name="t265_base_link" />
+  <joint name="t265_joint" type="fixed">
+    <origin rpy="0.145426 0.00775 0.16" xyz="0 0 0" />
+    <parent link="head_pan_link" />
+    <child link="t265_base_link" />
+  </joint>
   <link name="head_tilt_link">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0081 0.0025 0.0113" />

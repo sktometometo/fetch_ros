@@ -143,7 +143,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://fetch_description/meshes/head_box_link.dae" />
+        <mesh filename="package://fetch_description/meshes/head_box_link.dae" scale="0.001 0.001 0.001" />
       </geometry>
       <material name="">
         <color rgba="0.356 0.361 0.376 1" />
@@ -152,7 +152,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://fetch_description/meshes/head_box_link_collision.STL" />
+        <mesh filename="package://fetch_description/meshes/head_box_link_collision.STL" scale="0.001 0.001 0.001" />
       </geometry>
     </collision>
   </link>
